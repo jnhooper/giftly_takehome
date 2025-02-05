@@ -8,6 +8,15 @@ class ApiController < ApplicationController
   end
 
   def add_review
+    p = PlaceReview.create!(
+      place_id: params[:place_id],
+      author_name: params[:author_name],
+      review_text: params[:review_text],
+      rating: params[:rating],
+    )
+    render json: p
+  rescue => e
+    render json: {status: "error", message: "Failed to create the review #{e.message}"}
   end
 
 private
