@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   dehydrate,
   HydrationBoundary,
@@ -20,10 +21,13 @@ export default async function Page({
     queryFn: () => getPlace(id),
   })
   return (
-    <div className={`${styles.container} grid  justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`} >
-      <HydrationBoundary state={dehydrate(queryClient)}>
-        <Place id={id} />
-      </HydrationBoundary>
-    </div >
+    <div className="p-8">
+      <Link className="underline" href='/'>home</Link>
+      <div className={`${styles.container} grid  justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`} >
+        <HydrationBoundary state={dehydrate(queryClient)}>
+          <Place id={id} />
+        </HydrationBoundary>
+      </div >
+    </div>
   )
 }
