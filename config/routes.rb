@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "/api/places", to: "api#places"
   get "/api/place/:place_id", to: "api#place"
   post "/api/add_review", to: "api#add_review"
+  put "/api/edit_review", to: "api#edit_review"
+  post "/api/delete", to: "api#delete"
 end

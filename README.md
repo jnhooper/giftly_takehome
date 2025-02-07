@@ -2,6 +2,7 @@
 
 # Prereqs
 - rbenv or other Ruby version manager (app currently depends on Ruby 3.3.5)
+- not required but this uses volta for managing node versions. you should check it out https://volta.sh/
 
 # Rails application
 There is a barebone rails application that exposes the following routes:
@@ -18,6 +19,11 @@ $ rails server
 ```
 
 You should now be able to curl 127.0.0.1:3000/api/places and see results
+
+# next application
+1. ```cd  takehome_front```
+2. ```npm install```
+3. ```npm run dev```
 
 # Assignment
 
